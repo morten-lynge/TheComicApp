@@ -1,0 +1,253 @@
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+  .col-image {
+    height:272px; 
+  }
+  .col-text {
+    height:272px; 
+  }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .col-image {
+    height:346px; 
+  }
+  .col-text {
+    height:346px; 
+  }
+  .thumb-size {
+    width:232px; 
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .col-image {
+      height:346px; 
+  }
+  .col-text {
+    height:346px; 
+  }
+  .thumb-size {
+    width:229px; 
+  }
+  .container-width {
+    width:486px; 
+ }
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  .col-image {
+     height:408px; 
+  }
+  .col-text {
+    height:408px; 
+  }
+  .thumb-size {
+    width:100%; 
+  }
+  .container-width {
+    width:576px; 
+  }
+
+span img {
+    position:relative;
+    z-index:-1;
+}
+span {
+    position:relative;
+    z-index:initial;
+    display:inline-block;
+}
+
+
+}
+
+h1, h2 {
+  font-weight: 500 !important;
+  color: #343a40;
+  text-align: center;
+  margin-bottom:0px;
+}
+
+h4, h5 {
+  font-weight: 400 !important;
+  color: #343a40;
+  margin-bottom:3px;
+}
+
+h6 {
+  font-weight: 200 !important;
+  color: #343a40; 
+}
+
+.navbar-thecomicapp {
+    background-color: #4f4f5a;
+    color: white;
+    box-shadow: 0 2px 4px hsla(244, 46%, 42%, 0.04);
+  }
+
+  .btn {
+    box-shadow: 1px 2px 5px #acacac;
+  } 
+  
+  .btn.focus, .btn:focus {
+    box-shadow: 1px 2px 5px #acacac;
+  } 
+
+.btn-info {
+  background-color:rgb(104, 116, 128);
+  border-color: rgb(52, 58, 64);
+  box-shadow: 1px 2px 5px #acacac;
+}
+
+.btn-info.focus, .btn-info:focus {
+  box-shadow: 1px 2px 5px #acacac;
+} 
+
+.navbar-brand {
+    color: white !important;
+  }
+
+  .container {
+    padding: 0px !important;
+  }
+  
+   
+  .col-lg-12, .col-lg-9, .col-lg-3 {
+    padding: 2px !important;
+  }
+
+  
+  .container-borderDefault {
+    margin: 2px !important;
+    padding: 4px !important;
+    border: solid 1px rgb(151, 151, 151);
+    border-radius: 4px;
+    box-shadow: 1px 2px 12px #acacac;
+  }
+  
+  .container-alphabetbar {
+    margin: 2px !important;
+    padding: 4px !important;
+    border: solid 1px rgb(151, 151, 151);
+    border-radius: 4px;
+    box-shadow: 1px 2px 12px #acacac;
+    color: #343a40;
+    background-color: white;
+     
+  }
+   
+
+
+  .container-header {
+    height:34px;
+    border-bottom:1px solid rgb(200, 200, 200);
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    background-color:rgba(194, 204, 206, 0.4);
+    margin:-4px;
+    margin-bottom:4px;
+    padding:4px;
+    padding-left:10px;
+  }
+
+  .container-borderforImagAndText {
+    margin: 2px !important;
+    padding: 4px !important;
+    height: 98%;
+    border: solid 1px rgb(151, 151, 151);
+    border-radius: 4px;
+    box-shadow: 1px 2px 12px #acacac;
+  }
+
+  
+
+  label {
+    margin-bottom: 0.0rem !important;
+ }
+
+ .alphabet-container {
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+ .alphabetbar {
+  height: 25px;
+  width: 25px;
+  margin-right:auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400; 
+  color:#343a40;
+  border:solid 1px #343a40;
+  border-radius: 4px;
+  display:inline-block;
+}
+
+.navigate-back-container {
+  max-width: 720px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navigate-back {
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 300; 
+  color:rgb(5, 5, 5);
+  border:solid 1px rgb(151, 151, 151);
+  border-radius: 4px;
+  display:inline-block;
+}  
+
+ body {
+  padding-top: 50px;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+  background-color: rgb(248, 250, 252);
+}
+
+ /* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 0px;
+}
+
+
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  top: 100px;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: auto;
+}
