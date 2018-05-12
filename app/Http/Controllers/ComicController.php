@@ -58,11 +58,11 @@ class ComicController extends Controller
         $comic->comic_title = request('title');
         $comic->comic_subtitle = request('subtitle');
         $comic->resume = request('resume');
-        $comic->
+        //$comic->
 
         $comic->save();
 
-        return redirect('/');
+        return redirect()->back();
     }
 
     /**
@@ -92,6 +92,10 @@ class ComicController extends Controller
         return view('comic.edit',\compact('comic','id'));
     }
 
+   
+
+    
+
     /**
      * Update the specified resource in storage.
      *
@@ -113,8 +117,12 @@ class ComicController extends Controller
 
         
         $comic->save();
+        $collectionID = $comic->find($id)->getCollectionID->id;    
+        
+       
+        return redirect()->action('CollectionController@show', ['id' => $collectionID]);
 
-        return redirect('/');
+       
     }
 
     /**

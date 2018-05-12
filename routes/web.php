@@ -19,7 +19,9 @@ Route::get('/', function () {
 
 /*Route::get('/comics', 'ComicController@show');*/
 Route::resource('listcollections','ListCollectionsAlphabeticController');
+
 Route::resource('collections','CollectionController');
+Route::resource('usercomic','UserComicController');
 Route::resource('comics','ComicController');
 
 
