@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <div class="container-alphabetbar">  
+      <div class="container-topbar">  
         <h1>{{ "- $collection->name -" }}</h1>
       </div>
     </div>
