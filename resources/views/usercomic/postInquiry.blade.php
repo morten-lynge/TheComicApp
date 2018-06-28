@@ -20,11 +20,8 @@
     
        
         <div class="container-inputForms">
-        @if ( $userHasComic  )
-          <div class="container-header" style="margin-bottom:10px"><h4>{{ 'Rediger : '.$collection->name.' Nr. '.$comic->serienumber. '  -  '.$comic->subtitle  }}</h4></div>
-        @else
-          <div class="container-header" style="margin-bottom:10px"><h4>{{ 'Tilføj : '.$collection->name.' Nr. '.$comic->serienumber. '  -  '.$comic->subtitle  }}</h4></div>
-        @endif
+          <div class="container-header" style="margin-bottom:10px"><h4>{{ 'Efterlys : '.$collection->name.' Nr. '.$comic->serienumber. '  -  '.$comic->subtitle  }}</h4></div>
+     
 
         <div class="container">
           <div class="row" style="margin:0px">
@@ -135,37 +132,24 @@
                 {{ csrf_field() }} 
               @endif
                 <input type="hidden" name="comic_id" value="{{ $comic->id}}">
+                <input type="hidden" name="condition" value="0">
+                <input type="hidden" name="status" value=0>
                 <div class="row">
-                  <div class="col-lg-5">  
-                    <label for="condition">Stand</label>
-                      <select class="form-control" id="condition" name="condition">
-                        
-                        <option value=100>(10.0) - Gem Mint</option>
-                        <option value=99>(9.9) - Mint  </option>
-                        <option value=98>(9.8) - Near Mint/Mint</option>
-                        <option value=96>(9.6) - Near Mint+</option>
-                        <option value=94>(9.4) - Near Mint</option>
-                        <option value=92>(9.2) - Near Mint-</option>
-                        <option value=90>(9.0) - Very Fire/Near Mint</option>
-                        <option value=85>(8.5) - Very Fine+</option>
-                        <option value=80>(8.0) - Very Fine</option>
-                        <option value=75>(7.5) - Very Fine-</option>
-                        <option value=70>(7.0) - Fine / Very Fine</option>
-                        <option value=60>(6.0) - Fine</option>
-                        <option value=55>(5.5) - Fine-</option>
-                        <option value=50>(5.0) - Very Good/Fine</option>
-                        <option value=45>(4.5) - Very Good+</option>
-                        <option value=40>(4.0) - Very Good</option>
-                        <option value=35>(3.5) - Very Good-</option>
-                        <option value=30>(3.0) - Good/Very Good-</option>
-                        <option value=25>(2.5) - Good+</option>
-                        <option value=20>(2.0) - Good</option>
-                        <option value=18>(1.8) - Good-</option>
-                        <option value=18>(1.5) - Fair/Good</option>
-                        <option value=18>(1.0) - Fair</option>
-                      </select>
+                  <div class="col-lg-7">  
+                  <label for="wanted">Efterlysning</label>
+                    <select class="form-control" id="wanted" name="wanted">
+                      <option value=8>Søger flot samlerstand. Jeg skal have den for enhver pris !</option>
+                      <option value=7>Søger god samlerstand. Jeg skal have den for enhver pris !</option>
+                      <option value=6>Søger flot samlerstand. Jeg vil gerne give en god pris</option>
+                      <option value=5>Søger god samlerstand. Jeg vil gerne give en god pris</option>
+                      <option value=4>Søger flot samlerstand, men til en rimelig pris</option>
+                      <option value=3>Søger god samlerstand, men til en rimelig pris</option>
+                      <option value=2>Søger et læse eksemplar, men til en rimelig pris</option>
+                      <option value=1>Søger et billigt læse eksemplar. Stand er ikke vigtig</option>
+                      <option value=0>Ingen efterlysning</option>
+                    </select>
                   </div>
-                  <div class="col-lg-7">
+                  <div class="col-lg-5">
               
                   </div>  
                 </div>
@@ -173,10 +157,10 @@
               
                 <div class="form-group">
                   <label for="comment">Kommentar</label>
-                  <textarea class="form-control" id="comment" name="comment" rows="3">{{ $comic->id}}</textarea>
+                  <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                 </div>
                 <a href="{{ action('CollectionController@show',[$collection->id]) }}" style="margin:5px;margin-top:6px;float:right" class="btn btn-info" role="button">Fortryd</a>
-                <button type="submit" style="margin:5px;margin-top:6px;float:right" class="btn btn-info">Tilføj til samling</button>
+                <button type="submit" style="margin:5px;margin-top:6px;float:right" class="btn btn-info">Udsend efterlysning</button>
               </div>
             
               

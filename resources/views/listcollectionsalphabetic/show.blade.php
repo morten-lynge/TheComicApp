@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['active_navbar_item' => 'Min_Samling'])
 
 @section('content')
 <?php $alphabet = array("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"); ?>

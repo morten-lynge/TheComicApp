@@ -88,8 +88,9 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        $comic = Comic::findOrFail($id);    
-        return view('comic.edit',\compact('comic','id'));
+        $comic = Comic::findOrFail($id); 
+        $collectionID = $comic->find($id)->getCollectionID->id;   
+        return view('comic.edit',\compact('comic','id','$collectionID'));
     }
 
    

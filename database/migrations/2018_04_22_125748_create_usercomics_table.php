@@ -18,6 +18,9 @@ class CreateUsercomicsTable extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('comic_id');
             $table->tinyInteger('condition');
+            $table->tinyInteger('status');
+            $table->string('wanted')->nullable();
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }

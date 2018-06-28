@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['active_navbar_item' => 'Min_Samling'])
 
 @section('content')
 <div class="container">

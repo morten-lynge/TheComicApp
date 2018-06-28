@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['active_navbar_item' => 'Home'])
 
 
 @section('content')

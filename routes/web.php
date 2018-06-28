@@ -21,8 +21,15 @@ Route::get('/', function () {
 Route::resource('listcollections','ListCollectionsAlphabeticController');
 
 Route::resource('collections','CollectionController');
+Route::resource('most_wanted_dashboard','Most_Wanted_Dashboard_Controller');
+
+
+Route::get('usercomic/{usercomic}/postInquiry', 'UserComicController@postInquiry');
+Route::get('usercomic/{usercomic}/removeInquiry', 'UserComicController@removeInquiry');
 Route::resource('usercomic','UserComicController');
 Route::resource('comics','ComicController');
+Route::resource('reviewcomic','ReviewComicController');
+
 
 
 

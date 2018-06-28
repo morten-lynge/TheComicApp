@@ -38,8 +38,21 @@
                 <a class="nav-link" href="#"></a>
                 </li>
             @else
+               
+                @if ($active_navbar_item == "Min_Samling")
+                <li class="nav-item active">
+                @else
                 <li class="nav-item">
+                @endif
                     <a class="nav-link" href="{{ action('ListCollectionsAlphabeticController@index') }}">Min Samling</a>
+                </li>
+                
+                @if ($active_navbar_item == "Efterlysninger")
+                <li class="nav-item active">
+                @else
+                <li class="nav-item">
+                @endif
+                    <a class="nav-link" href="{{ action('Most_Wanted_Dashboard_Controller@index') }}">Efterlysninger</a>
                 </li>
                 
             @endguest
