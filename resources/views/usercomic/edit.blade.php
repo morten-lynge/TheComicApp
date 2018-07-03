@@ -125,14 +125,15 @@
                
               <div class="col-lg-9" >
               @if ( $userComicRecordExist )
-                <!-- THIS SECTION IS WHEN USERCOMIC RECORD ALREADY EXISTS-->
+                <!-- THIS SECTION IS WHEN USERCOMIC RECORD ALREADY EXISTS AND WE ONLY WANT to UPDATE EXISTING RECORD IN DB-->
                 <form method="POST" action="/usercomic/{{$comic->id}}">   
                 {{ method_field('PUT') }}  {{ csrf_field() }} 
                 <input type="hidden" name="status" value=1> 
               @else 
-                <!-- THIS SECTION IS FOR ADDING A NEW USERCOMIC RECORD -->
+                <!-- THIS SECTION IS FOR ADDING A BRAND NEW USERCOMIC RECORD IN DB-->
                 <form method="POST" action="/usercomic">
-                {{ csrf_field() }} 
+                {{ csrf_field() }}
+                <input type="hidden" name="status" value=1> 
               @endif
                 <input type="hidden" name="comic_id" value="{{ $comic->id}}">
                 <div class="row">
