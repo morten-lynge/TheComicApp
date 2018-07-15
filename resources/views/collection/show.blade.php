@@ -1,5 +1,47 @@
 @extends('layouts.app', ['active_navbar_item' => 'Min_Samling'])
 
+<?php
+  function DisplayLikes($value)
+  {
+    switch ($value) {
+      case 0:
+        echo '<div><span class= "stars-container stars-0">★★★★★★</span></div>';
+        break;
+      case 10:
+        echo '<div><span class= "stars-container stars-10">★★★★★★</span></div>';
+        break;
+      case 20:
+        echo '<div><span class= "stars-container stars-20">★★★★★★</span></div>';
+        break;
+      case 30:
+        echo '<div><span class= "stars-container stars-30">★★★★★★</span></div>';
+        break;
+      case 40:
+        echo '<div><span class= "stars-container stars-40">★★★★★★</span></div>';
+        break;
+      case 50:
+        echo '<div><span class= "stars-container stars-50">★★★★★★</span></div>';
+        break;
+      case 60:
+        echo '<div><span class= "stars-container stars-60">★★★★★★</span></div>';
+        break;
+      case 70:
+        echo '<div><span class= "stars-container stars-70">★★★★★★</span></div>';
+        break;
+      case 80:
+        echo '<div><span class= "stars-container stars-80">★★★★★★</span></div>';
+        break;
+      case 90:
+        echo '<div><span class= "stars-container stars-90">★★★★★★</span></div>';
+        break;
+      case 100:
+        echo '<div><span class= "stars-container stars-100">★★★★★★</span></div>';
+        break;      
+    }    
+  }
+?>
+
+
 @section('content')
 <div class="container">
   <div class="row">
@@ -19,44 +61,76 @@
         </div>  
       </div>  
       
-      <div class="col-lg-3 col-text">
-        <div class="container-borderforImagAndText">  
+    <div class="col-lg-3 col-text">
+      <div class="container-borderforText">  
           
           @if ( Auth::check() && Auth::user()->isAdmin() )
             <a href="{{ action('CollectionController@edit',[$collection->id]) }}" class="btn btn-info" role="button">Edit</a>
           @else
-          <div>
-            <img src="{{ asset('images/icons/settings01.png') }}" width="35" height="30" alt="ok">
-            <h4 style="display: inline-block;">Visnings Indstillinger</h4>
+          <div style="display:inline-block;margin-bottom:10px; margin-right:10px">
+            <h4>Valgte Indstillinger</h4>
           </div>  
-          <hr>
-            <div style="margin:5px">
+          <br>
+           
               <div class="checkbox">
                 <label><input style="margin-right:5px" type="checkbox" checked=checked value="">Vis tegneserier jeg har.</label>
               </div>
               <div class="checkbox">
                 <label ><input style="margin-right:5px" type="checkbox" value="">Vis tegneserier jeg efterlyser.</label>
               </div>
-              <div class="checkbox">
+              <!--<div class="checkbox">
                 <label><input style="margin-right:5px" type="checkbox" value="">Vis alle tegneserier.</label>
-              </div>
-              <hr>
+              </div>-->
+             
               <div class="checkbox">
-                <label><input style="margin-right:5px" type="checkbox" checked=checked value="">Vis 1. oplag.</label>
-              </div>
-              <div class="checkbox">
-                <label><input style="margin-right:5px" type="checkbox" value="">Vis 2.oplag.</label>
+                <label><input style="margin-right:5px" type="checkbox" checked=checked value="">Vis kun 1. oplag.</label>
               </div>
               <div class="checkbox">
-                <label><input style="margin-right:5px" type="checkbox" value="">Vis 3 oplag.</label>
-              </div>  
-              <div class="checkbox">
-                <label><input style="margin-right:5px" type="checkbox" value="">Vis alle oplag.</label>
+                <label><input style="margin-right:5px" type="checkbox" value="">Vis kun 1.udgave.</label>
               </div>
-              <hr>
-              <a href="{{ action('CollectionController@index') }}" class="btn btn-info" role="button">Husk Indstillinger</a>
               
-            </div>
+              <!--<div class="checkbox">
+                <label><input style="margin-right:5px" type="checkbox" value="">Vis alle oplag.</label>
+              </div> -->
+              <hr style="margin-top:5px">
+              <div style="margin-bottom:10px;">
+                <div style="display:inline-block;margin-right:5px">
+                  <h4>Popularitet</h4>
+                </div> 
+                <div style="display: inline-block;">
+                  <span style="font-size:18px;color: Dodgerblue;">
+                    <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-up"></i>
+                  </span>
+                </div> 
+              </div>  
+              <div style="display:inline-block;margin-right:17px">
+                <h6>Afgive stemmer:</h6>
+              </div>
+              <div style="display:inline-block;margin-right:5px">
+                  <h6>35</h6>
+              </div> 
+              <div style="display:inline-block;margin-right:5px">
+                <h6>Samlet popularitet:</h6>
+              </div>
+              <div style="display: inline-block;">
+                <span style="font-size:14px;color: Dodgerblue;">
+                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-up"></i>
+                  <i class="fas fa-thumbs-up"></i>
+                  
+                </span>
+              </div>   
+              <hr style="margin-top:5px">
+              <a href="{{ action('CollectionController@index') }}" class="btn btn-info" role="button" style="margin-right:15px;margin-bottom:20px;float:right;position:absolute;right:0;bottom:0;">Rediger Indstillinger</a>
+             
+              
+           
            
           @endif
         </div>  
@@ -131,8 +205,13 @@
         <div class="col-lg-12">  
           <div>
             
-            <h6 style="width:150px;display:inline-block">{{ 'Anmeldelser:' }}</h6>
-            <h6 style="width:180px;display:inline-block">{{ 'Samlet anmeldelse:' }}</h6>
+            <h6 style="width:140px;display:inline-block">{{ 'Anmeldelser: '.$comic->votes }}</h6>
+            <?php if ($comic->total_likes > 0) 
+                    $percent  = round(100*($comic->total_likes / $comic->votes)/6,-1);
+                  else
+                  $percent = 0; ?>
+            <h6 style="display:inline-block">{{ 'Samlet anmeldelse:' }}</h6>
+            <h6 style="display:inline-block">      <?php DisplayLikes($percent); ?> </h6>
           </div>  
         </div>
         </div>
@@ -208,8 +287,13 @@
         <div class="col-lg-12">  
           <div>
             
-            <h6 style="width:150px;display:inline-block">{{ 'Anmeldelser:' }}</h6>
-            <h6 style="width:180px;display:inline-block">{{ 'Samlet anmeldelse:' }}</h6>
+            <h6 style="width:150px;display:inline-block">{{ 'Anmeldelser: '.$comic->votes }}</h6>
+            <?php if ($comic->total_likes > 0) 
+                    $percent  = round(100*($comic->total_likes / $comic->votes)/6,-1);
+                  else
+                  $percent = 0; ?>
+            <h6 style="display:inline-block">{{ 'Samlet anmeldelse:' }}</h6>
+            <h6 style="display:inline-block">      <?php DisplayLikes($percent); ?> </h6>
           </div>  
         </div>
         </div>

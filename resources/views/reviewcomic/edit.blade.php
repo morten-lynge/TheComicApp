@@ -10,6 +10,13 @@
     $userComicRecordExist=$comic->existingUserComicRecord(Auth::id());
     $serie=$comic->serie;  
     $index= $serie[0]; 
+
+    function IsChecked($value, $id)
+  {
+    if ($value == $id)
+       echo 'checked';
+    
+  }
 ?>
 
 
@@ -34,40 +41,40 @@
           @if ( $userHasComic  )
             <!-- THIS SECTION IS FOR EDITING A USERCOMIC IF USER HAS IT -->
             <div class="col-lg-9" >
-              <form method="POST" action="/usercomic/{{$comic->id}}">   
+              <form method="POST" action="/reviewcomic/{{$comic->id}}">   
               {{ method_field('PUT') }}  {{ csrf_field() }} 
               <input type="hidden" name="comic_id" value="{{ $comic->id}}">           
                 <div style="">
-
-               
-              <div class="row">
-                <div class="col-lg-8">  
-                <label for="wanted">Hvor mange stjerner skal denne tegneserie have ?</label>
-                    <select class="form-control" id="wanted" name="wanted">
-                    <option value="{{$usercomic->wanted}}" selected>{{$usercomic->getWantedTextString()}}</option>
-                      <option value=8>Søger flot samlerstand. Jeg skal have den for enhver pris !</option>
-                      <option value=7>Søger god samlerstand. Jeg skal have den for enhver pris !</option>
-                      <option value=6>Søger flot samlerstand. Jeg vil gerne give en god pris</option>
-                      <option value=5>Søger god samlerstand. Jeg vil gerne give en god pris</option>
-                      <option value=4>Søger flot samlerstand, men til en rimelig pris</option>
-                      <option value=3>Søger god samlerstand, men til en rimelig pris</option>
-                      <option value=2>Søger et læse eksemplar, men til en rimelig pris</option>
-                      <option value=1>Søger et billigt læse eksemplar. Stand er ikke vigtig</option>
-                      <option value=0>Ingen efterlysning</option>
-                    </select>  
+                  <div class="row" style="margin-left:0px">
+                    <div class="col-lg-12">
+                      <h5 style="float:left;display:inline-block;line-height:2.6">Giv din anmeldelse af album: </h5>
+                      {{$usercomic->likes}}
+                    
+                  
+                      <ul class="rate-area">
+                      <input type="hidden" name="rating" value="0">
+                      <input type="radio" id="6-star" name="rating" value="6" <?php Ischecked($usercomic->likes,6);?>/><label for="6-star" title="Amazing">6 stars</label>
+                      <input type="radio" id="5-star" name="rating" value="5" <?php Ischecked($usercomic->likes,5);?>/><label for="5-star" title="Very Good">5 stars</label>
+                      <input type="radio" id="4-star" name="rating" value="4" <?php Ischecked($usercomic->likes,4);?>/><label for="4-star" title="Good">4 stars</label>
+                      <input type="radio" id="3-star" name="rating" value="3" <?php Ischecked($usercomic->likes,3);?>/><label for="3-star" title="Average">3 stars</label>
+                      <input type="radio" id="2-star" name="rating" value="2" <?php Ischecked($usercomic->likes,2);?>/><label for="2-star" title="Not Good">2 stars</label>
+                      <input type="radio" id="1-star" name="rating" value="1" <?php Ischecked($usercomic->likes,1);?>/><label for="1-star" title="Bad">1 star</label>
+                     </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-4">
-             
-                
-                </div>  
-              </div>
-            </div>
+            
+
+
+
+            <hr>
+
             <div class="form-group">
-              <label for="comment">Skriv anmeldelse</label>
+              <label for="comment"><h5>Skriv anmeldelse</h5></label>
                 <textarea class="form-control" id="comment" name="comment" value="" rows="8">{{$usercomic->comment}}</textarea>
             </div>
             <a href="{{ action('CollectionController@show',[$collection->id]) }}" style="margin:5px;margin-top:6px;float:right" class="btn btn-info" role="button">Fortryd</a>
-            <button type="submit" style="margin:5px;margin-top:6px;float:right" class="btn btn-info">Opdater samling</button>
+            <button type="submit" style="margin:5px;margin-top:6px;float:right" class="btn btn-info">Send Anmeldelse</button>
               
             </div>
         

@@ -88,6 +88,11 @@ class CollectionsTableSeeder extends Seeder
              'thumb' => 'Teknofaedrene_thumb.jpg', 
              'description' => 'missing text'],
 
+             ['name'=> 'Tintin Faksimile',           'main_image' => 'Tintin_Faksimile_1100x500.jpg', 
+             'main_caption' => 'sometext', 
+             'thumb' => 'Tintin_Faksimile_thumb.jpg', 
+             'description' => 'missing text'],
+
              ['name'=> 'XIII',  'main_image' => 'XIII_1100x500.jpg', 
              'main_caption' => 'sometext', 
              'thumb' => 'XIII_thumb.jpg', 

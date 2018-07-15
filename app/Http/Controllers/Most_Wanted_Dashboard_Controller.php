@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Collection;
+use App\Comic;
 use App\Usercomic;
 
 class Most_Wanted_Dashboard_Controller extends Controller
@@ -15,6 +16,7 @@ class Most_Wanted_Dashboard_Controller extends Controller
      */
     public function index()
     {
+        
         $usercomics = Usercomic::all();
         //$indeks = 'J';
         //$collections = Collection::where('name', 'LIKE', $indeks.'%')->get();

@@ -22,6 +22,8 @@ class CreateCollectionsTable extends Migration
             $table->string('main_caption')->nullable();
             $table->string('thumb')->nullable();
             $table->longText('description')->nullable();
+            $table->tinyInteger('votes')->default(0);
+            $table->Integer('total_likes')->default(0);
             $table->timestamps();
         });
     }

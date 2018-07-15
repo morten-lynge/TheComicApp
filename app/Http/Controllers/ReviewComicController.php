@@ -30,6 +30,59 @@ class ReviewComicController extends Controller
        
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+       
+        $usercomic = Usercomic::where([
+            ['user_id', '=', Auth::id()],
+            ['comic_id', '=', $id]])->firstOrFail();
+            
+            
+            if (request('rating') == '0')
+            {
+               //some sort of erromessage to user     
+            }
+            elseif ($usercomic->rated == '0')
+            {       
+                $usercomic->rated = '1';
+                $comic = Comic::find($id);
+                $comic->votes = $comic->votes+1;
+                $usercomic->likes = request('rating');
+                $comic->total_likes = $comic->total_likes+$usercomic->likes;
+                $comic->save();
+            }
+            else
+            {
+                $comic = Comic::find($id);
+                $comic->total_likes = $comic->total_likes-$usercomic->likes;
+                $usercomic->likes = request('rating');
+                $comic->total_likes = $comic->total_likes+$usercomic->likes;
+                $comic->save();
+            }
+
+            
+
+            
+            
+         
+        $usercomic->save();   
+
+        $collectionID = Comic::find($usercomic->comic_id)->getCollectionID->id;    
+        
+        return redirect()->action('CollectionController@show', ['id' => $collectionID]);
+
+    }
+
+
+
+
      /**
      * Show the form for editing the specified resource.
      *
@@ -51,5 +104,8 @@ class ReviewComicController extends Controller
             return view('reviewcomic.edit',\compact('comic','collection'));
         }
     }
+
+
+    
 
 }

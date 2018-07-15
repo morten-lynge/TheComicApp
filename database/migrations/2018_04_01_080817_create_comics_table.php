@@ -35,6 +35,8 @@ class CreateComicsTable extends Migration
             $table->string('minor_release')->nullable();
             $table->string('publisher')->nullable();
             $table->string('publishing_year')->nullable();
+            $table->tinyInteger('votes')->default(0);
+            $table->Integer('total_likes')->default(0);
             $table->timestamps();
         });
     }

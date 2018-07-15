@@ -16,11 +16,23 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/thecomicapp.css') }}" rel="stylesheet">
-</head>
+    <link href="{{ asset('css/5star.css') }}" rel="stylesheet">
+    <!--load Font Awsome Styles -->
+    <link href="{{ asset('css/all.css') }}" rel="stylesheet" type="text/css"> 
+    <link href="{{ asset('css/fontawesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/brands.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/solid.css') }}" rel="stylesheet">
+
+    
+
+    
+
+  </head>
 <body>
 
 

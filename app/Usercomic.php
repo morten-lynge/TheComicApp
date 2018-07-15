@@ -74,5 +74,21 @@ class Usercomic extends Model
         }
         return $result;
     }
+
+    public function getLikesTextString()
+    {
+        switch($this->likes)
+        {
+          
+            case 5:$result="5 Stjerner - En af de bedste jeg længe har læst";break;
+            case 4:$result="4 Stjerner - Rigtig God";break;
+            case 3:$result="3 Stjerner - Over middel";break;
+            case 2:$result="2 Stjerner - Middelmådig";break;
+            case 1:$result="1 Stjerne - Under middel";break;
+            case 0:$result="0 Stjerner - Dårlig";break;
+            default:$result=NULL;
+        }
+        return $result;
+    }
    
 }

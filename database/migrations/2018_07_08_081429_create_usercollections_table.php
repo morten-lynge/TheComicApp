@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsercomicsTable extends Migration
+class CreateUsercollectionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class CreateUsercomicsTable extends Migration
      */
     public function up()
     {
-        Schema::create('usercomics', function (Blueprint $table) {
+        Schema::create('usercollections', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('comic_id');
-            $table->tinyInteger('condition');
-            $table->tinyInteger('status');
-            $table->string('wanted')->nullable();
-            $table->string('comment')->nullable();
+            $table->unsignedInteger('collection_id');
             $table->tinyInteger('rated')->default(0);
             $table->tinyInteger('likes')->default(0);
-            $table->string('review')->nullable();
+            $table->tinyInteger('achivement01')->default(0);
+            $table->tinyInteger('achivement02')->default(0);
+            $table->tinyInteger('achivement03')->default(0);
+            $table->tinyInteger('achivement04')->default(0);
+            $table->tinyInteger('achivement05')->default(0);
+            $table->tinyInteger('achivement06')->default(0);
             $table->timestamps();
         });
     }
@@ -35,6 +36,6 @@ class CreateUsercomicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usercomics');
+        Schema::dropIfExists('usercollections');
     }
 }

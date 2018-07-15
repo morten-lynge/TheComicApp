@@ -182,6 +182,116 @@ class ComicsTableSeeder extends Seeder
             'serienumber' => '21', 'writer' => 'Pierre Christin','additional_writers' => '','artist' => 'Jean-Claude Mézières','additional_artists' => ''
             ,'translator' => 'Per Vadmand','letterer' => '','pages' => '64','size' => '220 x 295','cover' => 'Softcover','coloring' => 'color',
             'publisher'=>'Cobolt','publishing_year'=>'2010','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Tintin i Congo',  'frontpage' => 'Tintin_Faksimile_01.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '1', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2005','major_release'=>'3','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Tintin i Amerika',  'frontpage' => 'Tintin_Faksimile_02.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '2', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2005','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Faraos Cigarer',  'frontpage' => 'Tintin_Faksimile_03.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '3', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Den Blå Lotus',  'frontpage' => 'Tintin_Faksimile_04.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '4', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2005','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Det Knuste Øre',  'frontpage' => 'Tintin_Faksimile_05.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '5', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'3','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Den Sorte Ø',  'frontpage' => 'Tintin_Faksimile_06.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '6', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'3','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Ottokars Sceptor',  'frontpage' => 'Tintin_Faksimile_07.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '7', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Krappen Med De Gyldne Klosakse',  'frontpage' => 'Tintin_Faksimile_08.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '8', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Den Mystiske Stjerne',  'frontpage' => 'Tintin_Faksimile_09.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '9', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Enhjørningens Hemmelighed',  'frontpage' => 'Tintin_Faksimile_10.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '10', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Rackham Den Rødes Skat',  'frontpage' => 'Tintin_Faksimile_11.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '11', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'De Syv Krystalkugler',  'frontpage' => 'Tintin_Faksimile_12.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '12', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Soltemplet',  'frontpage' => 'Tintin_Faksimile_13.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '13', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Landet Med Det Sorte Guld',  'frontpage' => 'Tintin_Faksimile_14.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '14', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2006','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Mission Til Månen',  'frontpage' => 'Tintin_Faksimile_15.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '15', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'De Første Skridt På Månen',  'frontpage' => 'Tintin_Faksimile_16.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '16', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Tournesol Mysteriet',  'frontpage' => 'Tintin_Faksimile_17.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '17', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Koks I Lasten',  'frontpage' => 'Tintin_Faksimile_18.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '18', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Tintin I Tibet',  'frontpage' => 'Tintin_Faksimile_19.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '19', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Castafoires Juveler',  'frontpage' => 'Tintin_Faksimile_20.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '20', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Rute 714 Til Sydney',  'frontpage' => 'Tintin_Faksimile_21.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '21', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Tintin Faksimile',   'subtitle' => 'Tintin Og Picaroerne',  'frontpage' => 'Tintin_Faksimile_22.jpg',   'serie' => 'Tintin Faksimile',
+            'serienumber' => '22', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
+            ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
+            'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
         
         ]);
     }
