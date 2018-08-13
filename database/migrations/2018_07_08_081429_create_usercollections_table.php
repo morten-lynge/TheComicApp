@@ -18,7 +18,7 @@ class CreateUsercollectionsTable extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('collection_id');
             $table->tinyInteger('rated')->default(0);
-            $table->tinyInteger('likes')->default(0);
+            $table->tinyInteger('popularity')->default(0);
             $table->tinyInteger('achivement01')->default(0);
             $table->tinyInteger('achivement02')->default(0);
             $table->tinyInteger('achivement03')->default(0);

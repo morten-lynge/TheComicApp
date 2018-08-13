@@ -292,6 +292,106 @@ class ComicsTableSeeder extends Seeder
             'serienumber' => '22', 'writer' => 'Herge','additional_writers' => '','artist' => 'Herge','additional_artists' => ''
             ,'translator' => 'Niels Søndergaard','letterer' => '','pages' => '68','size' => '235 x 308','cover' => 'Hardcover','coloring' => 'color',
             'publisher'=>'Carlsen Comics','publishing_year'=>'2007','major_release'=>'2','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_1.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '1', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_2.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '2', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_3.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '3', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_4.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '4', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_5.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '5', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_6.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '6', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_7.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '7', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_8.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '8', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_9.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '9', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '68','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_10.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '10', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1966','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_11.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '11', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_12.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '12', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_13.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '13', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_14.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '14', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_15.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '15', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_16.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '16', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_17.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '17', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_18.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '18', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_19.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '19', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
+
+            ['title'=> 'Superman 1966-69',   'subtitle' => 'Superman 1966',  'frontpage' => 'Superman_1966-69_20.jpg',   'serie' => 'Superman 1966-69',
+            'serienumber' => '20', 'writer' => '','additional_writers' => '','artist' => '','additional_artists' => ''
+            ,'translator' => '','letterer' => '','pages' => '52','size' => '175 x 255','cover' => '','coloring' => 'sort/hvid',
+            'publisher'=>'Interpresse A/S','publishing_year'=>'1967','major_release'=>'1','minor_release'=>'1'],
         
         ]);
     }

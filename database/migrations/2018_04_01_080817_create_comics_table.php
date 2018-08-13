@@ -19,6 +19,8 @@ class CreateComicsTable extends Migration
             $table->string('subtitle')->nullable();
             $table->string('frontpage')->nullable();
             $table->string('serie')->nullable();
+            $table->string('sub_serie')->nullable();
+            $table->string('collection')->nullable();
             $table->integer('serienumber')->nullable();
             $table->longText('resume')->nullable();            ;
             $table->string('writer')->nullable();
@@ -35,7 +37,10 @@ class CreateComicsTable extends Migration
             $table->string('minor_release')->nullable();
             $table->string('publisher')->nullable();
             $table->string('publishing_year')->nullable();
-            $table->tinyInteger('votes')->default(0);
+            $table->tinyInteger('rare_item')->default(0);
+            $table->Integer('registrered_items')->default(0);
+            $table->tinyInteger('average_condition')->default(0);
+            $table->Integer('votes')->default(0);
             $table->Integer('total_likes')->default(0);
             $table->timestamps();
         });

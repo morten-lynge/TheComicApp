@@ -9,6 +9,16 @@ use App\Usercomic;
 
 class ReviewComicController extends Controller
 {
+    /*****************************************************************************************/
+    /* AUTHENTICATION                                                                        */
+    /* This section authenticates if user is logged in, otherwise redirected to login page   */
+    /*************************************************************************************** */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
      /**
      * Store a newly created resource in storage.
      *
@@ -44,12 +54,13 @@ class ReviewComicController extends Controller
             ['user_id', '=', Auth::id()],
             ['comic_id', '=', $id]])->firstOrFail();
             
-            
+            // this mean user has not given it any stars
             if (request('rating') == '0')
             {
                //some sort of erromessage to user     
             }
-            elseif ($usercomic->rated == '0')
+            // if comic has not been rated by user
+            else if ($usercomic->rated == '0')
             {       
                 $usercomic->rated = '1';
                 $comic = Comic::find($id);
@@ -58,9 +69,14 @@ class ReviewComicController extends Controller
                 $comic->total_likes = $comic->total_likes+$usercomic->likes;
                 $comic->save();
             }
+            // if user in a previous session has rated comic
             else
             {
                 $comic = Comic::find($id);
+                if ($comic->votes == 0)  
+                {
+                    dd("Something is not matching in database sanity check. ReviewComicController logged this error. Contact site-administrator"); 
+                }
                 $comic->total_likes = $comic->total_likes-$usercomic->likes;
                 $usercomic->likes = request('rating');
                 $comic->total_likes = $comic->total_likes+$usercomic->likes;

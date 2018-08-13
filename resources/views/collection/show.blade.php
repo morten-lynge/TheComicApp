@@ -56,11 +56,21 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-9 col-image">
-        <div class="container-borderforImagAndText">
+        <div class="container-borderforImagAndText" style="position:relative;">
+        
           <img src="{{ asset('images/collections/main/' .$index.'/'. $collection->main_image) }}" class="img-fluid" style="width:100%;max-height:100%"/>
+          <div style="position:absolute;top:58%;left:78%;width:100%;z-index:1;">
+            <img src="{{ asset('images/awards/GotThemAll_Badge_Gold_v4.png') }}" style="width:25%;" />
+          </div> 
+          
+       
         </div>  
       </div>  
       
+
+   
+
+
     <div class="col-lg-3 col-text">
       <div class="container-borderforText">  
           
@@ -127,9 +137,13 @@
                 </span>
               </div>   
               <hr style="margin-top:5px">
-              <a href="{{ action('CollectionController@index') }}" class="btn btn-info" role="button" style="margin-right:15px;margin-bottom:20px;float:right;position:absolute;right:0;bottom:0;">Rediger Indstillinger</a>
-             
-              
+              <div style="display:inline-block;margin-bottom:10px; margin-right:10px">
+            <h4>Bedrifter</h4>
+          </div>  
+          <br>
+           
+              <a href="{{ action('UserCollectionController@edit',[$collection->id]) }}" class="btn btn-info" role="button" style="margin-right:15px;margin-bottom:20px;float:right;position:absolute;right:0;bottom:0;z-index:1;">Rediger Indstillinger</a>
+            
            
            
           @endif
@@ -140,13 +154,31 @@
   
   </div>  
 
+<!--************************************************************************************-->
+<!--*  This section is for collections that contains sub-collections                   *-->
+<!--************************************************************************************-->
+ @if ($collection->contain_subcollection)
+ 
+ <?php $subcollections = $collection->getSubcollections(); ?>
+ <div class="container">
+  <div class="row">
+  	<div class="col-lg-12">
+	  @foreach ($subcollections as $subcollection)
+      <?php $index=$subcollection->name[0]; ?>
+	    <div class="container-borderDefault" style="display:inline-block">
+          <h6>
+          <a href="{{ action('CollectionController@show',[$subcollection->id]) }}">{{ $subcollection->name }}</a>
+          </h6>
+         <a href="{{ action('CollectionController@show',[$subcollection->id]) }}"><img src="{{ asset('images/collections/thumb/' .$index.'/'. $subcollection->thumb) }}" class="thumb-size"/></a>
+        </div>   
+      @endforeach
+	  </div>  
+  </div>
+</div>
+ @endif 
+<!--************************************************************************************-->
 
 
-  
-
-<!-- <div class="container">
-  <?php echo nl2br($collection->description); ?>
-</div> -->
 
 <div class="container">
   <div class="row">
@@ -159,10 +191,18 @@
         
         @if ( $userHasComic )
         
-        <div class="container-header"><h4>{{ 'Nr. '.$comic->serienumber. '  -  '.$comic->subtitle  }}</h4> 
-          <div style="position:relative;top:-30px;z-index:10;width:30px;margin-left:auto;margin-right:10px">
-            <img src="{{ asset('images/icons/check.png') }}" width="30" height="25" alt="ok">
-          </div> 
+        <?php 
+        
+
+        $image="images/awards/shiny-diamond-workinprogess_10_0_v6.png"; ?>
+        <div class="container-header" style="position:relative;" ><h4>{{ 'Nr. '.$comic->serienumber. '  -  '.$comic->subtitle  }}</h4> 
+          <!--<div style="position:relative;top:-30px;z-index:10;width:30px;margin-left:auto;margin-right:10px"> -->
+            <!-- <img src="{{ asset('images/icons/check.png') }}" width="30" height="25" alt="ok"> -->
+            <div style="position:absolute;top:-1px;left:85%;width:100%;z-index:1;">
+            <img src="{{ asset($comic->usercomic->getConditionImage()) }}" style="width:13%;" />
+            </div>
+           
+          <!--</div> -->
         </div>
 
         <div class="container-body">
@@ -206,7 +246,7 @@
           <div>
             
             <h6 style="width:140px;display:inline-block">{{ 'Anmeldelser: '.$comic->votes }}</h6>
-            <?php if ($comic->total_likes > 0) 
+            <?php if ($comic->total_likes > 0 && $comic->votes > 0) 
                     $percent  = round(100*($comic->total_likes / $comic->votes)/6,-1);
                   else
                   $percent = 0; ?>
@@ -217,11 +257,13 @@
         </div>
         </div>   
             
-
+       <!-- ******************************************************************************************* -->
+       <!--   If user do not have comic                                                                 -->
+       <!-- ******************************************************************************************* -->   
         @else
         <div class="container-header"><h4>{{ 'Nr. '.$comic->serienumber. '  -  '.$comic->subtitle  }}</h4> 
           <div style="position:relative;top:-30px;z-index:10;width:25px;margin-left:auto;margin-right:10px">
-            <img src="{{ asset('images/icons/missing.png') }}" width="25" height="25" alt="missing">
+            <!-- <img src="{{ asset('images/icons/missing.png') }}" width="25" height="25" alt="missing"> -->
           </div> 
         </div>
 
@@ -231,7 +273,7 @@
           
             <div style="position:relative;">
               <a href="{{ action('ComicController@show',[$comic->id]) }}">
-                <img src="{{ asset('images/frontpages/' .$index.'/'. $comic->frontpage) }}" class="img-fluid" style="max-height:240px;opacity:0.3;border:1px solid rgb(151, 151, 151);"/></a>
+                <img src="{{ asset('images/frontpages/' .$index.'/'. $comic->frontpage) }}" class="img-fluid" style="filter: grayscale(1);-webkit-filter: grayscale(1);max-height:240px;opacity:0.3;border:1px solid rgb(151, 151, 151);"/></a>
                 <div style="position:absolute;top:0px;left:0px;width:100%;height:100%;"><h3 style="text-align:center;padding-top:50%;">MANGLER</h3></div>     
             </div>  
           </div>
@@ -260,28 +302,7 @@
           </div>
         </div>
         </div> 
-      <!--  <div class="container-header"><h4>{{ 'Nr. '.$comic->serienumber. '  -  '.$comic->subtitle  }}</h4>  
-          <div style="position:relative;top:-30px;float:right;z-index:1;">
-            <img src="{{ asset('images/icons/missing.png') }}" width="25" height="25" alt="missing">
-          </div>
-        </div>
-
-        <div class="container-body">
-          <div style="margin:5px;float:left">
-            <div style="width:150px;height:200px;clear"  
-              <a href="{{ action('ComicController@show',[$comic->id]) }}">
-                <img src="{{ asset('images/frontpages/' .$index.'/'. $comic->frontpage) }}" class="img-fluid" style="position:absolute;border:1px solid black;opacity:0.3;max-height:240px;"></a>
-                  <div style="position:relative;top:100px;left:10px"><h3>MANGLER</h3></div>  
-            </div>
-          </div>  
-          <div><h6 style="width:65px;display:inline-block">{{ 'Forfatter' }}</h6><h6 style="display:inline-block">{{  $comic->writer}}</h6></div>
-          <div><h6 style="width:65px;display:inline-block">{{ 'Tegner' }}</h6><h6 style="display:inline-block">{{  $comic->artist}}</h6></div>
-          <div><h6 style="width:65px;display:inline-block">{{ 'Forlag' }}</h6><h6 style="display:inline-block">{{  $comic->publisher}}</h6></div>
-          <div><h6 style="width:65px;display:inline-block">{{ 'Udgivet' }}</h6><h6 style="display:inline-block">{{  $comic->publishing_year.' , '. $comic->major_release.' udgave , '. $comic->minor_release.' oplag'}}</h6></div>
-          @if ($comic->userWantsIt(Auth::id()))
-          <div><h6 style="display:inline-block">{{ $comic->usercomic->getWantedTextString() }}</h6></div>
-          @endif
-        </div>-->
+     
         <div class="container-footer">
         <div class="row">
         <div class="col-lg-12">  

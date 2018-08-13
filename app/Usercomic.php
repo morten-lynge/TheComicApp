@@ -23,6 +23,39 @@ class Usercomic extends Model
         return User::find($this->user_id);
     }
    
+    public function getConditionImage()
+    {
+        switch($this->condition)
+        {
+            case 100:$result="images/awards/condition_10_0.png";break;
+            case 99:$result="images/awards/condition_9_9.png";break;
+            case 98:$result="images/awards/condition_9_8.png";break;
+            case 96:$result="images/awards/condition_9_6.png";break;
+            case 94:$result="images/awards/condition_9_4.png";break;
+            case 92:$result="images/awards/condition_9_2.png";break;
+            case 90:$result="images/awards/condition_9_0.png";break;
+            case 85:$result="images/awards/condition_8_5.png";break;
+            case 80:$result="images/awards/condition_8_0.png";break;
+            case 75:$result="images/awards/condition_7_5.png";break;
+            case 70:$result="images/awards/condition_7_0.png";break;
+            case 65:$result="images/awards/condition_6_5.png";break;
+            case 60:$result="images/awards/condition_6_0.png";break;
+            case 55:$result="images/awards/condition_5_5.png";break;
+            case 50:$result="images/awards/condition_5_0.png";break;
+            case 45:$result="images/awards/condition_4_5.png";break;
+            case 40:$result="images/awards/condition_4_0.png";break;
+            case 35:$result="images/awards/condition_3_5.png";break;
+            case 30:$result="images/awards/condition_3_0.png";break;
+            case 25:$result="images/awards/condition_2_5.png";break;
+            case 20:$result="images/awards/condition_2_0.png";break;
+            case 18:$result="images/awards/condition_1_8.png";break;
+            case 15:$result="images/awards/condition_1_5.png";break;
+            case 10:$result="images/awards/condition_1_0.png";break;
+            default:$result=NULL;
+        }
+        
+        return $result;
+    }
 
     public function getConditionName()
     {
@@ -39,6 +72,7 @@ class Usercomic extends Model
             case 80:$result="(8.0) - Very Fine";break;
             case 75:$result="(7.5) - Very Fine-";break;
             case 70:$result="(7.0) - Fine / Very Fine";break;
+            case 65:$result="(6.5) - Fine+";break;
             case 60:$result="(6.0) - Fine";break;
             case 55:$result="(5.5) - Fine-";break;
             case 50:$result="(5.0) - Very Good/Fine";break;
@@ -49,8 +83,8 @@ class Usercomic extends Model
             case 25:$result="(2.5) - Good+";break;
             case 20:$result="(2.0) - Good";break;
             case 18:$result="(1.8) - Good-";break;
-            case 18:$result="(1.5) - Fair/Good";break;
-            case 18:$result="(1.0) - Fair";break;
+            case 15:$result="(1.5) - Fair/Good";break;
+            case 10:$result="(1.0) - Fair";break;
             default:$result=NULL;
         }
         

@@ -7,6 +7,16 @@ use App\Collection;
 
 class CollectionController extends Controller
 {
+    /*****************************************************************************************/
+    /* AUTHENTICATION                                                                        */
+    /* This section authenticates if user is logged in, otherwise redirected to login page   */
+    /*************************************************************************************** */
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('admin')->only('create');
+    }
+        
     /**
      * Display a listing of the resource.
      *
@@ -49,12 +59,7 @@ class CollectionController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-
-        $this->middleware('admin')->only('create');
-    }
+    
     
     public function show($id)
     {

@@ -47,9 +47,7 @@
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="status" value=0>
-                    <label class="form-check-label" for="statusRadios2">
-                      Jeg mangler denne tegneserier
-                    </label>
+                    <label class="form-check-label" for="statusRadios2">Jeg mangler denne tegneserier</label>
                   </div>
   
 
@@ -73,6 +71,7 @@
                       <option value=80>(8.0) - Very Fine</option>
                       <option value=75>(7.5) - Very Fine-</option>
                       <option value=70>(7.0) - Fine / Very Fine</option>
+                      <option value=60>(6.5) - Fine+</option>
                       <option value=60>(6.0) - Fine</option>
                       <option value=55>(5.5) - Fine-</option>
                       <option value=50>(5.0) - Very Good/Fine</option>
@@ -83,8 +82,8 @@
                       <option value=25>(2.5) - Good+</option>
                       <option value=20>(2.0) - Good</option>
                       <option value=18>(1.8) - Good-</option>
-                      <option value=18>(1.5) - Fair/Good</option>
-                      <option value=18>(1.0) - Fair</option>
+                      <option value=15>(1.5) - Fair/Good</option>
+                      <option value=10>(1.0) - Fair</option>
                     </select>
                 </div>
                 <div class="col-lg-7">

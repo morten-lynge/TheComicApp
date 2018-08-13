@@ -9,7 +9,18 @@ use App\Usercomic;
 
 class UserComicController extends Controller
 {
+    /*****************************************************************************************/
+    /* AUTHENTICATION                                                                        */
+    /* This section authenticates if user is logged in, otherwise redirected to login page   */
+    /*************************************************************************************** */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
+    private $old_status; 
+    private $usercomic;
+    private $comic;
     /**
      * Store a newly created resource in storage.
      *
@@ -28,6 +39,10 @@ class UserComicController extends Controller
         $usercomic->wanted = request('wanted');
         $usercomic->save();
         
+        $comic = Comic::findOrFail($usercomic->comic_id);
+        $comic->registrered_items = $comic->registrered_items+1;
+        $comic->save();
+
         $collectionID = Comic::find($usercomic->comic_id)->getCollectionID->id;    
         
         return redirect()->action('CollectionController@show', ['id' => $collectionID]);
@@ -89,15 +104,31 @@ class UserComicController extends Controller
      */
     public function update(Request $request, $id)
     {
+           
         $usercomic = Usercomic::where([
             ['user_id', '=', Auth::id()],
             ['comic_id', '=', $id]])->firstOrFail();
         $usercomic->condition = request('condition');
         $usercomic->comment = request('comment');
         $usercomic->wanted = request('wanted');
+        $old_status = $usercomic->status;
         $usercomic->status = request('status');
-        $usercomic->save();   
+        $usercomic->save();  
+        
+        if ($usercomic->status == 0 )
+        {
+            $comic = Comic::findOrFail($usercomic->comic_id);
+            $comic->registrered_items = $comic->registrered_items-1;
+            $comic->save();
+        }
 
+        if ($usercomic->status == 1 && $old_status == 0)
+        {
+            $comic = Comic::findOrFail($usercomic->comic_id);
+            $comic->registrered_items = $comic->registrered_items+1;
+            $comic->save();
+        }
+        
         $collectionID = Comic::find($usercomic->comic_id)->getCollectionID->id;    
         
         return redirect()->action('CollectionController@show', ['id' => $collectionID]);

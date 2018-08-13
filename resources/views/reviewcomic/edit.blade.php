@@ -11,7 +11,7 @@
     $serie=$comic->serie;  
     $index= $serie[0]; 
 
-    function IsChecked($value, $id)
+  function IsChecked($value, $id)
   {
     if ($value == $id)
        echo 'checked';

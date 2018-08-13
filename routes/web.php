@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::resource('listcollections','ListCollectionsAlphabeticController');
 
 Route::resource('collections','CollectionController');
+Route::resource('usercollections','UserCollectionController');
 Route::resource('most_wanted_dashboard','Most_Wanted_Dashboard_Controller');
 
 

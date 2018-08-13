@@ -23,7 +23,7 @@ class ListCollectionsAlphabeticController extends Controller
     
     public function index()
     {
-        $collections = Collection::all();
+        $collections = Collection::all()->where('is_subcollection',0);
         return view('listcollectionsalphabetic.index',compact('collections'));
     }
 
@@ -56,7 +56,7 @@ class ListCollectionsAlphabeticController extends Controller
      */
     public function show($id)
     {
-        $collections = Collection::where('name', 'LIKE', $id.'%')->get();
+        $collections = Collection::where('name', 'LIKE', $id.'%')->where('is_subcollection',0)->get();
         $index =$id;
          return view('listcollectionsalphabetic.show',compact('collections','index'));
     }

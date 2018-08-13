@@ -11,6 +11,8 @@ set('repository', 'git@github.com:morten-lynge/TheComicApp.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', false); 
+set('ssh_multiplexing', false);
+set('use_relative_symlinks', false);
 
 // Shared files/dirs between deploys 
 add('shared_files', []);
@@ -43,5 +45,5 @@ after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
 
-// before('deploy:symlink', 'artisan:migrate');
+before('deploy:symlink', 'artisan:migrate');
 
